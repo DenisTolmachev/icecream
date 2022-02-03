@@ -1,0 +1,25 @@
+.hero__title {
+  font-family: $secondary-font;
+  @include font(400, 26px, 1.14, 0.04em);
+  text-transform: uppercase;
+  color: $primary-color;
+  margin-bottom: 19px;
+  @media screen and (min-width: $tablet) {
+    font-size: 22px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 38px;
+    margin-bottom: 25px;
+  }
+ 
+  &--secondary {
+    @include font(400, 48px, 0.96, 0.04em);
+    color: $primary-brand-color;
+    @media screen and (min-width: $tablet) {
+      font-size: 34px;
+    }
+    @media screen and (min-width: $desktop) {
+    @include font(400, 58px, 0.91, 0.04em);
+    }
+  }
+}

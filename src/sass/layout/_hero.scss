@@ -1,0 +1,348 @@
+.main-wrapper {
+  min-width: 100%;
+}
+
+.scrolltop {
+  @include transition(background-color);
+  @extend %flex-center-style;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  z-index: 99;
+  background-color: $primary-brand-color;
+  @media screen and (min-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
+  @media screen and (min-width: 1280px) {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+  &:hover,
+  &:focus {
+    background-color: $secondary-brand-color;
+  }
+}
+
+.showBtn {
+  opacity: 1;
+}
+
+.scroll-top__btn {
+  border: solid $primary-color;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  &--up {
+    transform: rotate(-135deg);
+  }
+}
+
+.hero {
+  overflow: hidden;
+  background-color: $secondary-brand-color;
+}
+
+.hero__container {
+  position: relative;
+  padding-top: 193px;
+  padding-bottom: 160px;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 100px;
+    padding-bottom: 173px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-top: 171px;
+    padding-bottom: 292px;
+    padding-right: 97px;
+  }
+}
+
+.hero__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title__wrapper {
+  z-index: 1;
+  position: relative;
+  width: 218px;
+  @media screen and (min-width: $tablet) {
+    width: 162px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 277px;
+  }
+}
+
+.title__list {
+  display: flex;
+  flex-direction: row;
+}
+
+.title__link {
+  display: block;
+  @include font(400, 8px, 1.14, 0.02em);
+  padding: 8px 14px;
+  border-radius: 20px;
+  @media screen and (min-width: $desktop) {
+    @include font(400, 14px, 1.29, 0.02em);
+    padding: 11px 22px;
+  }
+}
+
+.title__link--brand-color {
+  color: $primary-color;
+  background-color: $primary-brand-color;
+  @include transition(background-color);
+  @include transition(box-shadow);
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba($primary-text-color, 0.25);
+  }
+}
+
+.title__link--primary-color {
+  color: $primary-brand-color;
+  background-color: $primary-color;
+  @include transition(background-color);
+  @include transition(box-shadow);
+  &:hover,
+  &:focus {
+    background-color: $accent-shadow-color;
+    box-shadow: 0px 4px 4px rgba($primary-text-color, 0.25);
+  }
+}
+
+.title__item:not(last.child) {
+  margin-right: 8px;
+  @media screen and (min-width: $desktop) {
+    margin-right: 15px;
+  }
+}
+
+.outlets__wrapper {
+  z-index: 1;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.outlets__item {
+  position: relative;
+}
+
+.outlets__item:not(last.child) {
+  margin-bottom: 13px;
+  @media screen and (min-width: $desktop) {
+  margin-bottom: 35px;
+  }
+}
+
+.outlets__item::after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background-color: $primary-color;
+  position: absolute;
+  top: -4px;
+  right: -8px;
+  border-radius: 50%;
+  z-index: -1;
+
+  @media screen and (min-width: $desktop) {
+    width: 30px;
+    height: 30px;
+    right: -16px;
+    top: -8px;
+  }
+}
+
+.outlets__number {
+  @include font(400, 28px, 1.14, 0.04em);
+  text-align: end;
+  font-family: $secondary-font;
+  text-transform: uppercase;
+  color: $primary-brand-color;
+  @media screen and (min-width: $desktop) {
+    @include font(400, 46px, 1.15, 0.04em);
+  }
+}
+
+.outlets__text {
+  @include font(400, 8px, 1.25, 0.04em);
+  text-align: end;
+  color: $primary-color;
+  @media screen and (min-width: $desktop) {
+  @include font(400, 14px, 1.28, 0.04em);
+  }
+}
+
+.jug__wrapper {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 28px;
+  left: 34px;
+  @media screen and (min-width: $desktop) {
+    bottom: 45px;
+    left: 77px;
+  }
+}
+
+.animate__animated.animate__bounce {
+  --animate-duration: 5s;
+  --animate-delay: 2s;
+}
+
+.jug__image {
+  width: 124px;
+  @media screen and (min-width: $desktop) {
+    width: 188px;
+  }
+}
+
+.jug__article {
+  overflow: hidden;
+  width: 114px;
+  @media screen and (min-width: $desktop) {
+    width: 200px;
+    margin-left: 30px;
+  }
+}
+
+.jug__text {
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 8px;
+  line-height: 1.25;
+  color: $primary-color;
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.28;
+  }
+}
+
+.jug__overlay {
+  height: 100%;
+  width: 100%;
+  transition-property: transform, opasity;
+  @include transition(transform);
+  transform: translateX(-100%);
+}
+
+.jug__button {
+  position: absolute;
+  bottom: 11px;
+  width: 18px;
+  height: 18px;
+  margin-top: 7px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: 0px 4px 4px rgba($primary-text-color, 0.25);
+    transform: rotate(0);
+    transition: transform 0.5s $transition-timing-function;
+    &:hover, &:focus  {
+      transform: rotate(-90deg);
+    }
+  background-image: url(../images/hero/tablet/arrow-right-tablet@1x.png);
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/hero/tablet/arrow-right-tablet@2x.png);
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 26px;
+    height: 26px;
+    margin-top: 20px;
+    background-image: url(../images/hero/desktop/arrow-right-desktop@1x.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/hero/desktop/arrow-right-desktop@2x.png);
+    }
+  }
+  &:hover + .jug__overlay {
+    transform: translateX(0);
+  }
+}
+
+.jug__button:hover + .jug__overlay {
+  transform: translateX(0);
+}
+
+.hero-ellipse__wrapper {
+  position: absolute;
+  width: 346px;
+  height: 344px;
+  border-radius: 50%;
+  background-color: $tertiary-brand-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  right: -36px;
+  bottom: 75px;
+  @media screen and (min-width: $tablet) {
+    width: 324px;
+    height: 324px;
+    right: 137px;
+    bottom: 46px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 538px;
+    height: 538px;
+    right: 267px;
+    bottom: 75px;
+  }
+}
+
+.hero-icecream__image {
+  width: 171px;
+  position: absolute;
+  bottom: 0;
+  right: 32px;
+  @media screen and (min-width: $tablet) {
+    width: 143px;
+    right: 247px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 236px;
+    right: 450px;
+  }
+}
+
+.animate__animated.animate__pulse {
+  --animate-duration: 2s;
+  --animate-delay: 5s;
+}
+
+.hero-girl__wrapper {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.hero-girl__image {
+  position: absolute;
+  width: 168px;
+  bottom: 0;
+  right: 34px;
+  @media screen and (min-width: $desktop) {
+    width: 293px;
+    right: 109px;
+  }
+}
+
+.animate__animated.animate__fadeInUpBig {
+  --animate-duration: 2s;
+  --animate-delay: 10s;
+}

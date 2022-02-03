@@ -1,0 +1,174 @@
+.about {
+    padding: 125px 0 39px;
+    background-color: $secondary-color;
+
+  @media screen and (min-width:$tablet) {
+    padding: 130px 0 66px;
+  }
+
+  @media screen and (min-width:$desktop) {
+    padding: 125px 0 39px;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 479px) {
+    background-image: url(../images/about/milk-mob.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom 100px;
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/about/milk@2x-mob.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom 100px;
+    }
+  }
+
+  @media screen and (min-width: $mobile) and (max-width: 767px) {
+    background-image: url(../images/about/milk-mob.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom 100px;
+    
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/about/milk@2x-mob.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom 100px;
+    }
+  }
+
+    @media screen and (min-width: $desktop) and (max-width: 1999px) {
+    background-image: url(../images/about/milk-desktop.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom 15px;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/about/milk@2x-desktop.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom 15px;
+      }
+    }
+
+    @media screen and (min-width: 2000px) {
+      background-image: url(../images/about/milk-desktop.webp);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+  
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/about/milk@2x-desktop.webp);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-size: contain;
+      background-position: center;
+        }
+      }
+}
+
+.about__subtitle {
+  text-align: center;
+  margin-bottom: 15px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 16px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    letter-spacing: 0.04em;
+  }
+}
+
+.about__title {
+  letter-spacing: 0.04em;
+  text-align: center;
+  margin-bottom: 26px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 50px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    letter-spacing: 0.06em;
+    margin-bottom: 55px;
+  }
+}
+
+.about-description__text {
+  @include font(500, 12px, 1.62, 0.04em);
+  margin-bottom: 36px;
+
+  @media screen and (min-width: $tablet) {
+  @include font(500, 14px, 1.76, 0.04em);
+  margin-bottom: 37px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    margin-bottom: 35px;
+  }
+}
+
+.about-description__subtext {
+  @include font(500, 12px, 1.62, 0.04em);
+  margin-bottom: 10px;
+  color: $secondary-text-color;
+
+  @media screen and (min-width: $tablet) {
+  @include font(500, 14px, 1.76, 0.04em);
+  }
+
+  @media screen and (min-width: $desktop) {
+    line-height: 1.94;
+  }
+}
+
+.about-description__subtext--last {
+  margin-bottom: 35px;
+  @media screen and (min-width: $tablet) {
+  margin-bottom: 62px;
+}
+@media screen and (min-width: $desktop) {
+  margin-bottom: 45px;
+}
+}
+.about-field__description {
+  padding: 0 29px;
+
+  @media screen and (min-width: $tablet) {
+    padding: 50px 1px 0 17px;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: $desktop) {
+  padding-left: 74px;
+  flex-direction: column;
+  }
+}
+
+.about-field {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+}
+
+.about__thumb {
+  margin-bottom: 46px;
+
+  @media screen and (min-width: $tablet) {
+  min-width: 340px;
+  }
+
+  @media screen and (min-width: $desktop) {
+  min-width: 516px;
+  }
+}
+
+.about-button {
+  @extend %button--white;
+  min-width: 176px;
+  padding: 0;
+}

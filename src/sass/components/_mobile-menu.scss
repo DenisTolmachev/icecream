@@ -1,0 +1,56 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  @media screen and (max-width: 1279px) {
+   @include transition(visibility);
+    min-width: 254px;
+    background-color: $primary-brand-shadow-color;
+    height: 100vh;
+  }
+  @media screen and (max-width: 767px) {
+    min-width: 250px;
+  }
+  @media screen and (min-width:$tablet) and (max-width: 1279px) {
+    min-width: 254px;
+  }
+  @media screen and (min-width: $desktop) {
+    position: static;
+  }
+}
+
+
+.cross-button {
+  position: absolute;
+  display: block;
+  top: 23px;
+  right: 28px;
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    top: 23px;
+    right: 34px;
+  }
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.menu-container {
+  @media screen and (max-width: 767px) {
+  padding: 60px 20px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    padding: 60px 24px;
+  }
+}
+
+.menu-button {
+  width: 20px;
+  height: 14px;
+  fill: $primary-brand-color;
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    margin-right: 28px;
+  }
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+}

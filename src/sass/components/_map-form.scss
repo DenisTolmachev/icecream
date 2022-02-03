@@ -1,0 +1,150 @@
+.map-backdrop {
+  @extend %flex-center-style;
+  padding: 10px;
+}
+
+.map-form {
+  position: relative;
+  border-radius: 22px;
+  padding: 10px;
+
+  @media screen and (max-width: 767px) {
+    width: 80%;
+    height: 80%;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    width: 500px;
+    height: 500px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+.map-form__content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.map-form__contacts {
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  left: 0;
+  @extend %flex-center-style;
+  width: 100%;
+  padding: 10px;
+  background-color: $primary-color;
+}
+
+.map-form__title {
+  @extend %flex-center-style;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $primary-brand-color;
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+    line-height: 1.31;
+    margin-right: 15px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-right: 35px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 1.86;
+    margin-right: 60px;
+  }
+}
+
+.map-form__list-item {
+  @include transition(transform);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: scale(1);
+
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 10px;
+  }
+
+  &:hover {
+    transform: scale(1.15);
+    .map-form__text {
+      color: $primary-brand-color;
+    }
+    .map-form__link {
+      color: $primary-brand-color;
+    }
+  }
+}
+
+.map-form__text {
+  font-weight: 500;
+
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+    line-height: 1.31;
+    // margin-right: 5px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-right: 15px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    line-height: 1.86;
+    margin-right: 25px;
+  }
+}
+
+.map-form__text--primary {
+  color: $second-card-color;
+}
+
+.map-form__text--secondary {
+  color: $third-card-color;
+}
+
+.map-form__link {
+  color: $secondary-text-color;
+
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+    line-height: 1.31;
+    margin-right: 5px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-right: 15px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    line-height: 1.86;
+    margin-right: 25px;
+  }
+}

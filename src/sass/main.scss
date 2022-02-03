@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap');
+
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/placeholders';
+
+@import './components/commonstyle';
+@import './components/container';
+@import './components/title';
+@import './components/hero-title';
+
+@import './components/subtitile';
+@import './components/mobile-menu';
+@import './components/backdrop';
+@import './components/modal-order';
+@import './components/modal-about';
+@import './components/map-form';
+@import './components/franchize-form';
+@import './components/buttons';
+
+@import './layout/header';
+@import './layout/hero';
+@import './layout/products';
+@import './layout/about';
+@import './layout/advantages';
+@import './layout/gallery';
+@import './layout/customer-reviews';
+@import './layout/contacts';
+@import './layout/footer';
+

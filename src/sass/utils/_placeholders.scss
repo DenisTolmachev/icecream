@@ -1,0 +1,49 @@
+%flex-center-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%button--pink {
+  height: 44px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+
+  border: none;
+  border-radius: 22px;
+
+  color: $primary-color;
+  background-color: $accent-color;
+
+  cursor: pointer;
+  transition: box-shadow $transition-duration $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba($primary-text-color, 0.25);
+  }
+}
+
+%button--white {
+  height: 44px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+
+  border: none;
+  border-radius: 22px;
+
+  background-color: $primary-color;
+  color: $accent-color;
+
+  cursor: pointer;
+  transition: box-shadow $transition-duration $transition-timing-function,
+    background-color $transition-duration $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba($primary-text-color, 0.25);
+    background-color: $accent-shadow-color;
+  }
+}

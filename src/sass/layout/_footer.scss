@@ -1,0 +1,126 @@
+.footer{
+    background-color:  $secondary-color;
+}
+
+.footer-wrapper{
+    @media screen and (min-width:$tablet){
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 91px;
+    }
+
+    @media screen and (min-width:$desktop){
+    padding-bottom: 97px;
+    }
+}
+
+@media screen and (max-width:767px){
+.footer .subtitle {
+    max-width: 232px;
+    margin-bottom: 17px;
+}
+.footer .title {
+    max-width: 200px;
+}
+}
+
+@media screen and (min-width:$tablet){
+.footer .subtitle {
+    max-width: 340px;
+    margin-bottom: 16px;
+}
+.footer .title {
+    max-width: 340px;
+}
+}
+
+@media screen and (min-width:$desktop){
+.footer .subtitle {
+    max-width: 472px;
+    margin-bottom: 15px;
+}
+.footer .title {
+    max-width: 477px;
+}
+}
+
+.social-list {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 46px;
+		&__link {
+            @extend %flex-center-style;
+            background-color: $tertiary-brand-color;
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+		}
+}
+
+.social-list__item:not(:last-child){
+    @media screen and (max-width:767px){
+        margin-right: 28px;
+    }
+
+    @media screen and (min-width:$tablet){
+        margin-right: 30px;
+    }
+
+    @media screen and (min-width:$desktop){
+        margin-right: 24px;
+    }
+    
+}
+
+.social-list__link:focus, .social-list__link:hover {
+    @include transition (background-color);
+    background-color: $primary-brand-color;
+}
+.title-wrapper, .contacts-wrapper {
+    @media screen and (max-width:767px){
+    padding-bottom: 43px;
+    }
+}
+.contact-tel {
+@include font(700, 12px, 1.86, 0.04em);
+text-align: right;
+@media screen and (min-width:$tablet){
+    font-size: 14px;
+}
+@media screen and (min-width:$desktop){
+    font-size: 16px;
+}
+	&__link {
+    font-weight: 500;
+    color: $primary-brand-color;
+	}
+}
+
+.copyright {
+padding-top: 22px;
+padding-bottom: 25px;
+border-top: solid 1px $border-color;
+@media screen and (min-width:$tablet){
+padding-top: 29px;
+padding-bottom: 18px;
+}
+@media screen and (min-width:$desktop){
+    padding-top: 9px;
+    padding-bottom: 10px;
+}
+	&__text {
+    @include font(700, 14px, 1.5, 0.04em);
+    
+    max-width: 150px;
+    text-align: center;
+    margin: 0 auto;
+    color: $secondary-text-color;
+    @media screen and (min-width:$tablet){
+     line-height: 1.86;   
+     max-width: 100%;
+    }
+	}
+}
+
+
+

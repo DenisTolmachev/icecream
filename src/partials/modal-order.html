@@ -1,0 +1,34 @@
+<!-- Модальное окно -->
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <p class="modal__title">Fill out the order form and we will contact you</p>
+    <form action="#" class="form" autocomplete="off">
+      <div class="input-field">
+        <label for="user-name" class="label"> Name </label>
+        <div class="input-field__group">
+          <input type="text" name="user-name" id="user-name" autofocus class="input-field__input" />
+          <svg class="input-field__icon" width="18" height="18">
+            <use href="./images/symbol-defs.svg#icon-person"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="input-field">
+        <label for="user-tel" class="label"> Phone</label>
+        <div class="input-field__group">
+          <input type="tel" name="user-tel" class="input-field__input" />
+          <svg class="input-field__icon" width="18" height="18">
+            <use href="./images/symbol-defs.svg#icon-phone"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="button-wraper">
+        <button type="submit" class="order-button pointer" data-modal-close>
+          <span class="modal-button__text">Send</span>
+        </button>
+        <button type="submit" class="close-button pointer" data-modal-close>
+          <span class="modal-button__text">Close form</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

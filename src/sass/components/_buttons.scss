@@ -1,0 +1,208 @@
+// ----------------------------- CONTACTS BUTTONS --------------------------  //
+
+.contacts-locations-button {
+  @extend %button--pink;
+  @extend %flex-center-style;
+
+  @media screen and (max-width: 767px) {
+    width: 161px;
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    width: 191px;
+    margin-right: 15px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 198px;
+    margin-right: 15px;
+  }
+}
+
+.contacts-franchise-button {
+  @extend %button--white;
+  @extend %flex-center-style;
+
+  @media screen and (max-width: 767px) {
+    width: 161px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    width: 174px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 180px;
+  }
+}
+
+.button__text {
+  margin-right: 13px;
+}
+
+.button__icon--white {
+  stroke: $primary-color;
+}
+
+.button__icon--pink {
+  stroke: $primary-brand-color;
+}
+
+// ---------------------- Header BUTTONS -------------------  //
+
+.header-button {
+  @extend %button--white;
+  @extend %flex-center-style;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 160px;
+  }
+}
+
+.modal-button {
+  @extend %button--white;
+  @extend %flex-center-style;
+  margin-bottom: 19px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 209px;
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    width: 186px;
+  }
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.modal-button__text {
+  margin-right: 16px;
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    margin-right: 12px;
+  }
+}
+
+.order-button {
+  @extend %button--pink;
+  @extend %flex-center-style;
+  @media screen and (max-width: 767px) {
+    width: 209px;
+    margin-bottom: 16px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 186px;
+    margin-right: 16px;
+  }
+}
+
+.close-button {
+  @extend %button--white;
+  @extend %flex-center-style;
+  @media screen and (max-width: 767px) {
+    width: 209px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 186px;
+  }
+}
+
+.button-wraper {
+  display: flex;
+  margin: 60px auto 19px;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @media screen and (min-width: $tablet) {
+    justify-content: space-around;
+  }
+}
+
+// ---------------------- FRANCHISE-MODAL BUTTONS -------------------  //
+
+.franchise-close-button {
+  @extend %flex-center-style;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 2px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    .franchise-form__icon-close {
+      transform: scale(1.25);
+      fill: $primary-brand-color;
+    }
+  }
+}
+
+.franchise-form__icon-close {
+  transform: scale(1);
+  transition: fill $transition-duration $transition-timing-function,
+    transform $transition-duration $transition-timing-function;
+  fill: $secondary-text-color;
+}
+
+.franchise-form-button {
+  @extend %button--pink;
+
+  @media screen and (max-width: 767px) {
+    width: 140px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    width: 174px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 180px;
+  }
+
+  &:hover,
+  &:focus {
+    .franchise-form-button__text {
+      transform: scale(1.25);
+    }
+  }
+}
+
+.franchise-form-button__text {
+  display: inline-block;
+  transform: scale(1);
+  transition: transform $transition-duration $transition-timing-function;
+}
+
+// ----------------------------------- MAP-MODAL BUTTONS -----------------------------  //
+
+.map-close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  @extend %flex-center-style;
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: $primary-color;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform $transition-duration $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.25);
+
+    .map-form__icon-close {
+      fill: $primary-brand-color;
+    }
+  }
+}
+
+.map-form__icon-close {
+  fill: $secondary-text-color;
+  transition: fill $transition-duration $transition-timing-function,
+    transform $transition-duration $transition-timing-function;
+}
